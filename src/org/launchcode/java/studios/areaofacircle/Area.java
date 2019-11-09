@@ -11,15 +11,10 @@ public class Area {
 
         input = new Scanner(System.in);
         System.out.println("Enter radius: ");
-            r = input.nextDouble();
-            input.close();
-        if (input.hasNextDouble()) {
+        r = input.nextDouble();
+        input.close();
+
         area = Circle.getArea(r);
         System.out.println("The area of a circle with the radius " + r + " is: " + area + ".");
-        } else {
-            System.out.println("Enter a number.");
-        }
-//        while (input.matches("/^[-+]?[0-9]+\.[0-9]+$/"));
-
     }
 }
