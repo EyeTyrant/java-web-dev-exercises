@@ -2,18 +2,21 @@ package org.launchcode.java.studios.countingcharacters;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Count {
   public static void main(String[] args) {
-    String quote = "If the product of two terms is zero then common sense" +
-        "says at least one of the two terms has to be zero to start with." +
-        " So if you move all the terms over to one side, you can put the " +
-        "quadratics into a form that can be factored allowing that side of " +
-        "the equation to equal zero. Once you've done that, it's pretty " +
-        "straightforward from there.";
+    String quote = "";
     HashMap<Character, Integer> letters = new HashMap<>();
-    char[] charsInQuote = quote.toCharArray();
-
+    Scanner input = new Scanner(System.in);
+    // Bonus mission 1: added prompt for user to enter string
+    System.out.println("Enter a quote: ");
+    quote = input.nextLine();
+    // Bonus mission 3: excluded non-alphabetic characters
+    quote = quote.replaceAll("\\s", "");
+    quote = quote.replaceAll("\\p{Punct}","");
+    // Bonus mission 2: added toLowerCase() to make case-insensitive
+    char[] charsInQuote = quote.toLowerCase().toCharArray();
     for (char i : charsInQuote){
       if (letters.containsKey(i)) {
         letters.put(i, letters.get(i) + 1);
