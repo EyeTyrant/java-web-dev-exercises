@@ -13,6 +13,7 @@ public class Count {
     System.out.println("Enter a quote: ");
     quote = input.nextLine();
     // Bonus mission 3: excluded non-alphabetic characters
+    quote = quote.replaceAll("\"", ""); // ? does not remove double quotes
     quote = quote.replaceAll("\\s", "");
     quote = quote.replaceAll("\\p{Punct}","");
     // Bonus mission 2: added toLowerCase() to make case-insensitive
