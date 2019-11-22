@@ -10,7 +10,10 @@ import java.util.Map;
 public class CountSuperBonus {
   public static void main(String[] args) throws IOException {
 //     Super Bonus mission: read string from a file
-    String quote = new String(Files.readAllBytes(Paths.get("C:\\Users\\jg141.000\\Desktop\\LaunchCode\\Java\\JavaPractice\\Chapter01\\java-web-dev-exercises\\src\\org\\launchcode\\java\\studios\\countingcharacters\\testfile")));
+//    String quote = new String(Files.readAllBytes(Paths.get("C:\\Users\\jg141.000\\Desktop\\LaunchCode\\Java\\JavaPractice\\Chapter01\\java-web-dev-exercises\\src\\org\\launchcode\\java\\studios\\countingcharacters\\testfile")));
+    String quote = new String(Files.readAllBytes(Paths.get("C:\\Users\\jg141\\Desktop\\LaunchCode\\Java\\JavaPractice\\Chapter01\\java-web-dev-exercises\\src\\org\\launchcode\\java\\studios\\countingcharacters\\testfile")));
+//    String quote = new String(Files.readAllBytes(Paths.get("org/launchcode/java/studios/countingcharacters/testfile")));
+    
     HashMap<Character, Integer> letters = new HashMap<>();
 
 //     Bonus mission 3: excluded non-alphabetic characters
