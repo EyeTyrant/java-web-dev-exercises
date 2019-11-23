@@ -18,15 +18,24 @@ public class CarTest {
 // @Test
 // public void testInitialGasTank(){
 //  assertEquals(10,test_car.getGasTankLevel(), .001);
- }@Test
- public void testInitialGasTank(){
-  assertFalse(false, 0);
+// }
+ public boolean testInitialGasTank(){
+  if (test_car.getGasTankLevel()==0);
+  return false;
+ }
+ @Test
+  public void testInitialGasTankTest(){
+  assertFalse((test_car.getGasTankLevel() == 0));
  }
   private Car test_car;
  @Before
  public void createCarObject(){
   test_car = new Car("Toyota", "Prius", 10, 50);
  }
+  
+  
+  
+  
     //TODO: gasTankLevel is accurate after driving within tank range
     //TODO: gasTankLevel is accurate after attempting to drive past tank range
     //TODO: can't have more gas than tank size, expect an exception
