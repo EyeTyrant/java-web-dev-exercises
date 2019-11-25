@@ -4,10 +4,15 @@ public class HouseCat extends Cat {
     private String name;
     private String species = "Felis catus";
 
+    // Constructors
     public HouseCat(String aName, double aWeight) {
         super(aWeight);
         name = aName;
     }
+    public HouseCat(String aName){
+        name = aName;
+    }
+
 
     public boolean isSatisfied() {
         return !isHungry() && !isTired();
